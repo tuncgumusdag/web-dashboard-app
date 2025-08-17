@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+#toaster {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(20px);
+  z-index: 1000;
+}
+
+#toaster.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#toaster.success {
+  background: #4CAF50;
+}
+
+#toaster.error {
+  background: #f44336;
+}
